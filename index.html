@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Background Example</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    /* Video should cover entire screen */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* ensures it fills screen without stretching */
+      z-index: -1; /* send video behind other content */
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      top: 40%;
+      font-family: sans-serif;
+      background: rgba(0, 0, 0, 0.4); /* optional: dark overlay for readability */
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="assets/3DEngineNew.mp4" type="video/mp4">
+    <!--source src="your-video.webm" type="video/webm"-->
+    <!-- fallback -->
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Content -->
+  <div class="hero">
+    <br>
+    <br>
+    <h1>Hello! I’m Rory</h1>
+    <p>Welcome to my portfolio! I’m a programmer fascinated by all things computer graphics. The animation displayed here was created with 
+      a 3D engine I developed from scratch using OpenGL and C++. It implements PBR Shaders and IBL lighting. This is one of my pinned 
+      projects on GitHub — feel free to explore it to learn more.
+    </p>
+  </div>
+
+  <div class="links">
+    <br>
+    <a href="https://github.com/RoryLindstrom78">
+    <img src="assets/github.png" alt="Github" title="Github"
+    width="150" id="github">
+    </a>
+
+    <a href="https://www.linkedin.com/in/rory-lindstrom-a2b40322a/">
+    <img src="assets/linkedin.png" alt="LinkedIn" title="LinkedIn"
+    width="150" id="linkedin">
+    </a>
+
+    <a href="assets/RESUME (4).pdf">
+    <img src="assets/document.png" alt="Resume PDF" title="Resume PDF"
+    width="150" id="resume">
+    </a>
+
+
+  </div>
+
+
+
+</body>
+</html>
