@@ -1,0 +1,96 @@
+.hero {
+  width: 500px;                /* or any width you want */
+  height: 300px;
+  margin-top: 50px;
+  margin-left: 50px;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  border-radius: 0px;
+
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 16px;
+  color: black;
+  
+  /* background image */
+  background-image: url('../assets/browserWindow.jpg');  /* path to your image */
+  background-size: 100% 100%;    /* fill the div without stretching */
+  background-position: center; /* center the image */
+  background-repeat: no-repeat; /* prevent tiling */
+
+  /* optional overlay for readability */
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0); /* dark overlay */
+  border-radius: 12px;
+  z-index: 0;
+}
+
+.hero > * {
+  position: relative; /* make content appear above overlay */
+  z-index: 1;
+}
+
+.links {
+  position: absolute;
+  top: 350px;    /* distance from top of viewport */
+  left: 300px;  /* distance from right of viewport */
+  width: 500px;
+  height: 300px;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  border-radius: 0px;
+
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 16px;
+  color: black;
+  
+  /* background image */
+  background-image: url('../assets/browserWindowLinks.jpg');  /* path to your image */
+  background-size: 100% 100%;    /* fill the div without stretching */
+  background-position: center; /* center the image */
+  background-repeat: no-repeat; /* prevent tiling */
+
+}
+
+.links::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0); /* dark overlay */
+  border-radius: 12px;
+  z-index: 0;
+}
+
+.links > * {
+  position: relative; /* make content appear above overlay */
+  z-index: 1;
+}
+
+#github {
+  position: relative;
+  right: 10px;
+  top: 65px;
+}
+
+#linkedin {
+  position: relative;
+  left: 0px;
+  top: 65px;
+}
+
+#resume {
+  position: relative;
+  top: 65px;
+  left: 10px;
+}
+
+a {
+  position: relative;
+}
